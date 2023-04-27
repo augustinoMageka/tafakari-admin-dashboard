@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  td {
+    @apply py-4 px-1 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200;
+  }
+  td:last-child {
+    @apply py-4 px-1 whitespace-nowrap text-right text-sm;
+  }
+  th {
+    @apply py-3 text-left text-xs font-medium text-gray-500 uppercase;
+  }
+  th:last-child {
+    @apply py-3 text-right text-xs font-medium text-gray-500 uppercase;
+  }
+  .wrapper {
+    @apply px-6 pb-3 pt-7 rounded-lg bg-white;
+  }
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
