@@ -5,7 +5,6 @@ import * as Yup from "yup";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { useRouter } from "next/router";
-import Link from "next/link";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required("Email is required"),
@@ -50,7 +49,7 @@ export default function LoginPage() {
           onSubmit={handleLogin}
         >
           {({ errors, touched }) => (
-            <div className="flex w-1/2">
+            <div className="flex w-3/4 md:w-1/2">
               <Form className="bg-white flex-1 text-gray-700 px-12 py-8 rounded-lg">
                 <h1 className="text-3xl">Login</h1>
                 <div className="mt-5">
@@ -114,11 +113,6 @@ export default function LoginPage() {
                     ></span>
                     Login
                   </button>
-                  <div className="mt-3">
-                    <Link href="/register" className="text-teal-500">
-                      No account? Go to register
-                    </Link>
-                  </div>
                 </div>
               </Form>
             </div>

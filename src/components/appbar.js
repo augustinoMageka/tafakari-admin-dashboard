@@ -1,10 +1,8 @@
-import { useUpdateModalContext } from "@/context/modalContext";
 import { signOut, getAuth } from "firebase/auth";
 import { toast } from "react-toastify";
 
 export default function Appbar() {
   const auth = getAuth();
-  const setModalState = useUpdateModalContext();
   const logoutSuccessNotify = () => toast.success("Logout success");
   const handleLogout = async () => {
     try {
@@ -23,7 +21,6 @@ export default function Appbar() {
           data-hs-overlay="#docs-sidebar"
           aria-controls="docs-sidebar"
           aria-label="Toggle navigation"
-          onClick={() => setModalState(true)}
         >
           <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 16 16">
             <path
@@ -32,7 +29,7 @@ export default function Appbar() {
             />
           </svg>
         </button>
-        <h1 className="text-xl">Pharmacist</h1>
+        <h1 className="text-xl">Admin</h1>
       </div>
       <div className="hs-dropdown relative inline-flex">
         <button
@@ -40,13 +37,14 @@ export default function Appbar() {
           type="button"
           className="hs-dropdown-toggle pr-2 pl-1 inline-flex justify-center items-center gap-2 rounded-full border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-1 focus:ring-offset-white focus:ring-blue-200 transition-all text-sm dark:bg-gray-800 dark:hover:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800"
         >
-          <img
+          {/* <img
             className="w-7 h-7 rounded-full"
             src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
             alt="Maria"
-          />
+          /> */}
+          <div className="h-7"></div>
           <span className="text-gray-600 font-medium truncate max-w-[7.5rem] dark:text-gray-400">
-            Maria
+            Admin
           </span>
           <svg
             className="hs-dropdown-open:rotate-180 w-2.5 h-2.5 text-gray-600"
@@ -69,9 +67,9 @@ export default function Appbar() {
           className="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden mt-2 min-w-[15rem] bg-white shadow-md rounded-lg p-2  dark:bg-gray-800 dark:border dark:border-gray-700"
           aria-labelledby="hs-dropdown-custom-trigger"
         >
-          <button className="flex w-full  items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
+          {/* <button className="flex w-full  items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
             Profile
-          </button>
+          </button> */}
           <button
             className="flex w-full items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
             onClick={handleLogout}

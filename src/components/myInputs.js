@@ -1,6 +1,13 @@
 import { Field } from "formik";
 
-export function MyTextField({ touched, errors, field, label, type }) {
+export function MyTextField({
+  touched,
+  errors,
+  field,
+  label,
+  type,
+  textarea = false,
+}) {
   return (
     <div>
       <label
@@ -14,6 +21,8 @@ export function MyTextField({ touched, errors, field, label, type }) {
           : label.charAt(0).toUpperCase() + label.slice(1)}
       </label>
       <Field
+        rows={8}
+        as={textarea && "textarea"}
         id={field}
         className="border-2 border-gray-500 p-2 rounded-md w-full focus:border-teal-500 focus:ring-teal-500"
         type={type}
