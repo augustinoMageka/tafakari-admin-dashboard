@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }) {
       <AuthProvider>
         <AuthMiddleware>
           <LoadingMiddleware>
-            <div className="bg-slate-100 min-h-screen">
+            <div className="bg-red-50 min-h-screen">
               <Component {...pageProps} />
             </div>
           </LoadingMiddleware>

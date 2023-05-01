@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function CardLink({ link, text }) {
   return (
     <Link
-      className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-teal-500 hover:text-teal-700"
+      className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-red-500 hover:text-red-700"
       href={link}
     >
       {text}

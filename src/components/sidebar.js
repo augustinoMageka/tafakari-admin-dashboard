@@ -60,13 +60,13 @@ export default function Sidebar() {
         id="docs-sidebar"
         className={`hs-overlay hs-overlay-open:translate-x-0 -translate-x-full transition-all duration-300 transform hidden fixed top-0 left-0 bottom-0 z-[60] w-52 bg-white border-r border-gray-200 pt-5 pb-10 overflow-y-auto lg:block lg:translate-x-0 lg:right-auto lg:bottom-0 dark:scrollbar-y dark:bg-gray-800 dark:border-gray-700`}
       >
-        <div className="px-6">
+        <div className="pl-3">
           <Link
-            className="flex-none text-xl font-semibold text-teal-800 dark:text-white"
+            className="flex-none text-2xl font-semibold text-red-800 dark:text-white"
             href="/"
             aria-label="Brand"
           >
-            tafakari
+            Tafakari
           </Link>
         </div>
         <nav
@@ -80,7 +80,7 @@ export default function Sidebar() {
                   <button
                     className={`w-full ${
                       nav.active
-                        ? "bg-teal-400 text-white font-semibold"
+                        ? "bg-red-400 text-white font-semibold"
                         : "text-slate-600 hover:bg-gray-200"
                     } hs-accordion-toggle transition-all duration-300 flex items-center gap-x-3.5 py-2 px-2.5 text-md rounded-md`}
                   >
@@ -101,7 +101,7 @@ export default function Sidebar() {
                           <Link
                             className={`flex items-center gap-x-3.5 py-1.5 mb-1 px-2.5 text-md rounded-md ${
                               nav.active && nav.activeSublink == link.link
-                                ? "bg-teal-400 text-gray-50 font-semibold"
+                                ? "bg-red-400 text-gray-50 font-semibold"
                                 : "hover:bg-gray-200 text-slate-700"
                             }`}
                             href={"/" + nav.link + "/" + link.link}
@@ -118,7 +118,7 @@ export default function Sidebar() {
                   <Link
                     className={`${
                       nav.active
-                        ? "bg-teal-400 text-white font-semibold"
+                        ? "bg-red-400 text-white font-semibold"
                         : "text-slate-600 hover:bg-gray-200"
                     } flex items-center gap-x-3.5 py-2 px-2.5 text-md rounded-md `}
                     href={"/" + nav.link}

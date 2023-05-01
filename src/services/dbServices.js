@@ -10,12 +10,28 @@ import {
   doc,
   query,
   orderBy,
+  getCountFromServer,
 } from "firebase/firestore";
 import { app } from "@/services/firebase";
 import { toast } from "react-toastify";
 import { months } from "@/utils/months";
 
 const db = getFirestore(app);
+
+export const getCount = async (collectionName) => {
+  try {
+    const coll = collection(db, collectionName);
+    const snapshot = await getCountFromServer(coll);
+    return snapshot.data().count;
+  } catch (e) {
+    console.log(e);
+    const errorNotify = () =>
+      toast.error(
+        "Oops something went wrong. Please check your internet connection."
+      );
+    errorNotify();
+  }
+};
 
 export const getDBDoc = async (collectionName, id) => {
   try {

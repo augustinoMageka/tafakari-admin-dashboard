@@ -4,11 +4,5 @@ export default function Page() {
   const backUrl = "/tafakari-nasi/nyimbo";
   const collectionName = "nyimbo";
 
-  return (
-    <EditPage
-      backUrl={backUrl}
-      collectionName={collectionName}
-      fields={fields}
-    />
-  );
+  return <EditPage backUrl={backUrl} collectionName={collectionName} />;
 }

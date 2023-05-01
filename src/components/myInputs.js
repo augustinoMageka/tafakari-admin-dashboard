@@ -24,7 +24,7 @@ export function MyTextField({
         rows={8}
         as={textarea && "textarea"}
         id={field}
-        className="border-2 border-gray-500 p-2 rounded-md w-full focus:border-teal-500 focus:ring-teal-500"
+        className="border-2 border-gray-500 p-2 rounded-md w-full focus:border-red-500 focus:ring-red-500"
         type={type}
         name={field}
         placeholder={"Enter " + field}
@@ -50,7 +50,7 @@ export function MySelect({ touched, errors, field, label, options }) {
       <Field
         as="select"
         id={field}
-        className="py-2.5 block w-full rounded-md text-sm dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 border-2 border-gray-500 focus:border-teal-500 focus:ring-teal-500"
+        className="py-2.5 block w-full rounded-md text-sm dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 border-2 border-gray-500 focus:border-red-500 focus:ring-red-500"
         type="text"
         name={field}
         required

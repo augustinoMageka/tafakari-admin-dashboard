@@ -7,7 +7,7 @@ export function MyButton({
   return (
     <button
       type="submit"
-      className={`bg-teal-500 text-sm text-white py-2 rounded-lg px-2 inline-flex justify-center items-center gap-2 border border-transparent font-semibold hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 transition-all dark:focus:ring-offset-gray-800 disabled:cursor-not-allowed disabled:bg-teal-500 disabled:bg-opacity-50 ${
+      className={`bg-red-500 text-sm text-white py-2 rounded-lg px-2 inline-flex justify-center items-center gap-2 border border-transparent font-semibold hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition-all dark:focus:ring-offset-gray-800 disabled:cursor-not-allowed disabled:bg-red-500 disabled:bg-opacity-50 ${
         fullyWide && "w-full"
       }`}
       disabled={loading}

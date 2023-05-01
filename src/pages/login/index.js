@@ -38,7 +38,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="bg-teal-500">
+    <div className="bg-red-500">
       <div className="h-screen flex items-center justify-center">
         <Formik
           initialValues={{
@@ -65,7 +65,7 @@ export default function LoginPage() {
                     </label>
                     <Field
                       id="email"
-                      className="border-2 border-gray-500 p-2 rounded-md w-full focus:border-teal-500 focus:ring-teal-500"
+                      className="border-2 border-gray-500 p-2 rounded-md w-full focus:border-red-500 focus:ring-red-500"
                       type="email"
                       name="email"
                       placeholder="Enter your email address"
@@ -90,7 +90,7 @@ export default function LoginPage() {
 
                     <Field
                       id="password"
-                      className="border-2 border-gray-500 p-2 rounded-md w-full focus:border-teal-500 focus:ring-teal-500"
+                      className="border-2 border-gray-500 p-2 rounded-md w-full focus:border-red-500 focus:ring-red-500"
                       type="password"
                       name="password"
                       placeholder="Enter your password"
@@ -101,7 +101,7 @@ export default function LoginPage() {
                   {/*Login button*/}
                   <button
                     type="submit"
-                    className="bg-teal-500 text-sm text-white py-3 mt-6 rounded-lg w-full px-4 inline-flex justify-center items-center gap-2 border border-transparent font-semibold hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 transition-all dark:focus:ring-offset-gray-800 disabled:cursor-not-allowed disabled:bg-teal-500 disabled:bg-opacity-50"
+                    className="bg-red-500 text-sm text-white py-3 mt-6 rounded-lg w-full px-4 inline-flex justify-center items-center gap-2 border border-transparent font-semibold hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition-all dark:focus:ring-offset-gray-800 disabled:cursor-not-allowed disabled:bg-red-500 disabled:bg-opacity-50"
                     disabled={loading}
                   >
                     <span
